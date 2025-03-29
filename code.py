@@ -11,7 +11,7 @@ import neopixel
 pixel_pin = board.A2
 num_pixels = 16
 
-pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.05, auto_write=False)
+pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.1, auto_write=False)
 
 
 def color_chase(color, wait):
@@ -23,12 +23,12 @@ def color_chase(color, wait):
 
 
 def rainbow_cycle(wait):
-    for j in range(255):
+    for j in range(0,255,8):
         for i in range(num_pixels):
-            rc_index = (i * 512 // num_pixels) + j
+            rc_index = (i * 256 // num_pixels) + j
             pixels[i] = colorwheel(rc_index & 255)
         pixels.show()
-        time.sleep(wait)
+ #       time.sleep(wait)
 
 
 RED = (255, 0, 0)
