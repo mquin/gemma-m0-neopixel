@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
+# 2025 Mike Quin <mike@elite.uk.com>
 #
 # SPDX-License-Identifier: MIT
 
